@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>개인정보 동의</title>
+</head>
+<body>
+    <h2>개인정보 수집 동의</h2>
+
+    <form action="/submit_info" method="post">
+        <label for="fname">이름:</label><br>
+        <input type="text" id="fname" name="fname" required><br>
+        
+        <label for="phone">연락처 (010-0000-0000):</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required><br>
+        
+        <label for="agree">개인정보 수집 동의:</label><br>
+        <input type="checkbox" id="agree" name="agree" required><br>
+
+        <label for="contact">응답결과를 받을 매체 선택:</label><br>
+        <input type="radio" id="kakao" name="contact" value="kakao">
+        <label for="kakao">카카오톡</label><br>
+        <input type="radio" id="email" name="contact" value="email">
+        <label for="email">이메일</label><br>
+
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>
